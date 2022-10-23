@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <environment names="Development">
+    <link rel="stylesheet" href="src/assets/style.css" />
+    <link rel="stylesheet" href="src/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="src/lib/fontawesome/css/all.css" />
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="dist/toy-robot.js" defer></script>
+  </environment>
+  <title>Toy Robot Challenge</title>
+</head>
+
+<body>
+  <div class="col-md-5 float-md-left">
+    <br>
+    <br>
+    <select class="custom-select col-md-6" id="x-axis">
+      <option value="0" selected>0</option>
+      <option value="20">1</option>
+      <option value="40">2</option>
+      <option value="60">3</option>
+      <option value="80">4</option>
+    </select>
+    <br>
+    <br>
+    <select class="custom-select col-md-6" id="y-axis">
+      <option value="80" selected>0</option>
+      <option value="60">1</option>
+      <option value="40">2</option>
+      <option value="20">3</option>
+      <option value="0">4</option>
+    </select>
+    <br /><br />
+    <select class="custom-select col-md-6" id="direction">
+      <option value="" selected>Select direction</option>
+      <option value="North">North</option>
+      <option value="South">South</option>
+      <option value="West">West</option>
+      <option value="East">East</option>
+    </select>
+
+    <br /><br />
+    <button type="button" class="btn btn-primary" onclick="placeRobot()">Place Toy Robot</button>
+    <div class="controls">
+      <button type="button" class="btn btn-success" onclick="move()"><span class="fa fa-arrow-up"></span></button>
+      <button type="button" class="btn btn-warning" onclick="turnLeft()"><span class="fa fa-arrow-left"></span></button>
+      <button type="button" class="btn btn-warning" onclick="turnRight()"><span class="fa fa-arrow-right"></span></button>
+      <button type="button" class="btn btn-warning" onclick="turnBack()"><span class="fa fa-arrow-down"></span></button>
+    </div>
+  </div>
+  <div class="container col-md-7 float-md-right">
+    <div id="board">
+      <div id="roboto"></div>
+    </div>
+  </div>
+  <div id="reportLog"></div>
+</body>
+</html>
